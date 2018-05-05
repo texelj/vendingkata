@@ -177,4 +177,15 @@ public class VendingMachineTest {
         assertEquals("0.70",vend.readDisplay());
         assertArrayEquals(vend.selectProduct(Product.CHIPS), new Coin[]{Coin.DIME,Coin.DIME});
     }
+
+    @Test
+    public void WhenProductSelectAndQuartersReturned(){
+        VendingMachine vend = new VendingMachine();
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.QUARTER);
+        assertEquals("1.00",vend.readDisplay());
+        assertArrayEquals(vend.selectProduct(Product.CHIPS), new Coin[]{Coin.QUARTER,Coin.QUARTER});
+    }
 }

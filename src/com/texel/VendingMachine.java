@@ -58,6 +58,10 @@ public class VendingMachine {
     private Coin[] makeChange(int difference){
         List<Coin> coins = new ArrayList<>();
         System.out.println(difference);
+        while(difference>=25){
+            coins.add(Coin.QUARTER);
+            difference-=25;
+        }
         while(difference>=10){
             coins.add(Coin.DIME);
             difference-=10;
