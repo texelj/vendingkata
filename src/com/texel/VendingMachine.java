@@ -5,19 +5,19 @@ package com.texel;
  */
 public class VendingMachine {
     private double totalInserted;
-    private boolean priceCheck;
-    private String priceDisplay;
+    private boolean productSelected;
+    private String productDisplay;
 
     public VendingMachine(){
         totalInserted=0;
-        priceCheck=false;
-        priceDisplay="";
+        productSelected =false;
+        productDisplay="";
     }
 
     public String readDisplay(){
-        if(priceCheck){
-            priceCheck = false;
-            return priceDisplay;
+        if(productSelected){
+            productSelected = false;
+            return productDisplay;
         }
         if(this.totalInserted>0){
             return String.format("%.2f",totalInserted);
@@ -41,9 +41,12 @@ public class VendingMachine {
 
     public void selectProduct(Product product) {
         if(product == Product.COLA){
+            productSelected = true;
             if(totalInserted<1.00){
-                priceCheck=true;
-                priceDisplay="1.00";
+                productDisplay="1.00";
+            } else {
+                productDisplay="THANK YOU";
+                totalInserted = 0;
             }
         }
     }
