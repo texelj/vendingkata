@@ -12,7 +12,7 @@ public class VendingMachine {
 
     public String readDisplay(){
         if(this.totalInserted>0){
-            return Double.toString(totalInserted);
+            return String.format("%.2f",totalInserted);
         }
         return "INSERT COIN";
     }
@@ -20,6 +20,8 @@ public class VendingMachine {
     public void insertCoin(Coin coin) {
         if(coin.equals(Coin.QUARTER)){
             totalInserted+=.25;
+        } else if(coin.equals(Coin.DIME)){
+            totalInserted+=.10;
         }
     }
 }

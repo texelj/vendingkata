@@ -9,15 +9,22 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class VendingMachineTest {
     @Test
-    public void WhenNoCoinsEntered(){
+    public void WhenNoCoinsEnteredAndDisplayRead(){
         VendingMachine vend = new VendingMachine();
         assertEquals("INSERT COIN", vend.readDisplay());
     }
 
     @Test
-    public void WhenQuarterInserted(){
+    public void WhenQuarterInsertedAndDisplayRead(){
         VendingMachine vend = new VendingMachine();
         vend.insertCoin(Coin.QUARTER);
         assertEquals("0.25",vend.readDisplay());
+    }
+
+    @Test
+    public void WhenDimeInsertedIntoMachineAndDisplayRead(){
+        VendingMachine vend = new VendingMachine();
+        vend.insertCoin(Coin.DIME);
+        assertEquals("0.10",vend.readDisplay());
     }
 }
