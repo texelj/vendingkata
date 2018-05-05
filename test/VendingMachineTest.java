@@ -84,10 +84,20 @@ public class VendingMachineTest {
     }
 
     @Test
-    public void WhenProductChipsPriceCheckAndDisplayRead(){
+    public void WhenProductChipsSelectedWithNoMoneyAndDisplayRead(){
         VendingMachine vend = new VendingMachine();
         vend.selectProduct(Product.CHIPS);
         assertEquals("0.50",vend.readDisplay());
         assertEquals("INSERT COIN",vend.readDisplay());
+    }
+
+    @Test
+    public void WhenProductChipsSelectedWithExactMoneyAndDisplayRead(){
+        VendingMachine vend = new VendingMachine();
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.QUARTER);
+        vend.selectProduct(Product.CHIPS);
+        assertEquals("THANK YOU",vend.readDisplay());
+        assertEquals("INSERT COIN", vend.readDisplay());
     }
 }
