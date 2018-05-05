@@ -129,4 +129,14 @@ public class VendingMachineTest {
         assertEquals("THANK YOU",vend.readDisplay());
         assertEquals("INSERT COIN", vend.readDisplay());
     }
+
+    @Test
+    public void WhenProductCandySelectedWithSomeMoneyAndDisplayRead(){
+        VendingMachine vend = new VendingMachine();
+        vend.insertCoin(Coin.QUARTER);
+        vend.selectProduct(Product.CANDY);
+        assertEquals("0.65",vend.readDisplay());
+        assertEquals("0.25",vend.readDisplay());
+    }
+
 }
