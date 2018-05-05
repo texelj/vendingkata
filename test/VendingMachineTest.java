@@ -1,3 +1,4 @@
+import com.texel.Coin;
 import com.texel.VendingMachine;
 import org.junit.Test;
 
@@ -11,5 +12,12 @@ public class VendingMachineTest {
     public void WhenNoCoinsEntered(){
         VendingMachine vend = new VendingMachine();
         assertEquals("INSERT COIN", vend.readDisplay());
+    }
+
+    @Test
+    public void WhenQuarterInserted(){
+        VendingMachine vend = new VendingMachine();
+        vend.insertCoin(Coin.QUARTER);
+        assertEquals("0.25",vend.readDisplay());
     }
 }
