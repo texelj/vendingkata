@@ -34,4 +34,11 @@ public class VendingMachineTest {
         vend.insertCoin(Coin.NICKEL);
         assertEquals("0.05",vend.readDisplay());
     }
+
+    @Test
+    public void WhenPennyInsertedIntoMachineAndDisplayRead(){
+        VendingMachine vend = new VendingMachine();
+        vend.insertCoin(Coin.PENNY);
+        assertEquals("INSERT COIN", vend.readDisplay());
+    }
 }
