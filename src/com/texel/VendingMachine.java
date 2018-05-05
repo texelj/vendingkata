@@ -22,6 +22,8 @@ public class VendingMachine {
             totalInserted+=.25;
         } else if(coin.equals(Coin.DIME)){
             totalInserted+=.10;
+        } else if(coin.equals(Coin.NICKEL)){
+            totalInserted+=.05;
         }
     }
 }
