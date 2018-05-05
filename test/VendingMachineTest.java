@@ -1,4 +1,5 @@
 import com.texel.Coin;
+import com.texel.Product;
 import com.texel.VendingMachine;
 import org.junit.Test;
 
@@ -51,5 +52,13 @@ public class VendingMachineTest {
         assertArrayEquals(vend.insertCoin(Coin.DIME),new Coin[]{});
         assertArrayEquals(vend.insertCoin(Coin.NICKEL),new Coin[]{});
         assertArrayEquals(vend.insertCoin(Coin.PENNY),new Coin[]{Coin.PENNY});
+    }
+
+    @Test
+    public void WhenProductColaPriceCheckAndDisplayRead(){
+        VendingMachine vend = new VendingMachine();
+        vend.selectProduct(Product.COLA);
+        assertEquals("1.00",vend.readDisplay());
+        assertEquals("INSERT COIN",vend.readDisplay());
     }
 }
