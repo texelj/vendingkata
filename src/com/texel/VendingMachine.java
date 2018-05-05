@@ -39,13 +39,15 @@ public class VendingMachine {
         return coinReturn;
     }
 
-    public void selectProduct(Product product) {
-        productSelected = true;
+    public Coin[] selectProduct(Product product) {
+        Coin[] coinReturn = new Coin[]{};
+        this.productSelected = true;
         if(totalInserted<product.price()){
             productDisplay=String.format("%.2f",product.price());
         } else {
             productDisplay="THANK YOU";
             totalInserted = 0;
         }
+        return coinReturn;
     }
 }
