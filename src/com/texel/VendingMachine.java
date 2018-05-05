@@ -1,5 +1,8 @@
 package com.texel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by jacob on 5/4/2018.
  */
@@ -46,8 +49,17 @@ public class VendingMachine {
             productDisplay=String.format("%.2f",product.price());
         } else {
             productDisplay="THANK YOU";
+            coinReturn = makeChange(totalInserted - product.price());
             totalInserted = 0;
         }
         return coinReturn;
+    }
+
+    private Coin[] makeChange(double difference){
+        List<Coin> coins = new ArrayList<>();
+        if(difference>=0.05){
+            coins.add(Coin.NICKEL);
+        }
+        return coins.toArray(new Coin[0]);
     }
 }

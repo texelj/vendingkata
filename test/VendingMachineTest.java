@@ -156,4 +156,14 @@ public class VendingMachineTest {
         vend.insertCoin(Coin.QUARTER);
         assertArrayEquals(vend.selectProduct(Product.CHIPS), new Coin[]{});
     }
+
+    @Test
+    public void WhenProductSelectedAndNickelReturned(){
+        VendingMachine vend = new VendingMachine();
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.NICKEL);
+        assertEquals("0.55",vend.readDisplay());
+        assertArrayEquals(vend.selectProduct(Product.CHIPS), new Coin[]{Coin.NICKEL});
+    }
 }
