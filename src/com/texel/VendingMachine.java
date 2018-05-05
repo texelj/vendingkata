@@ -40,14 +40,12 @@ public class VendingMachine {
     }
 
     public void selectProduct(Product product) {
-        if(product == Product.COLA){
-            productSelected = true;
-            if(totalInserted<1.00){
-                productDisplay="1.00";
-            } else {
-                productDisplay="THANK YOU";
-                totalInserted = 0;
-            }
+        productSelected = true;
+        if(totalInserted<product.price()){
+            productDisplay=String.format("%.2f",product.price());
+        } else {
+            productDisplay="THANK YOU";
+            totalInserted = 0;
         }
     }
 }
