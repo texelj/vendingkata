@@ -33,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/test/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+              <caret line="177" column="91" selection-start-line="177" selection-start-column="91" selection-end-line="177" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,8 +79,8 @@
       <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/texel/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.5109983">
+              <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -356,9 +356,9 @@
         <option value="$PROJECT_DIR$/src/com/texel/CoinWeight.java" />
         <option value="$PROJECT_DIR$/src/com/texel/Coin.java" />
         <option value="$PROJECT_DIR$/test/CoinTest.java" />
-        <option value="$PROJECT_DIR$/test/VendingMachineTest.java" />
         <option value="$PROJECT_DIR$/src/com/texel/Product.java" />
         <option value="$PROJECT_DIR$/src/com/texel/VendingMachine.java" />
+        <option value="$PROJECT_DIR$/test/VendingMachineTest.java" />
       </list>
     </option>
   </component>
@@ -816,9 +816,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_vendingkata - 2018.05.04 at 23h 39m 51s.xml">
-      <configuration name="All in vendingkata" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_vendingkata - 2018.05.04 at 23h 42m 58s.xml">
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
@@ -844,6 +841,9 @@
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_vendingkata - 2018.05.04 at 23h 52m 19s.xml">
+      <configuration name="All in vendingkata" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_vendingkata - 2018.05.04 at 23h 54m 10s.xml">
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -920,7 +920,7 @@
     <entry file="file://$PROJECT_DIR$/test/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <caret line="177" column="91" selection-start-line="177" selection-start-column="91" selection-end-line="177" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -929,8 +929,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/texel/VendingMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.5109983">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
