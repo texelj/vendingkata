@@ -32,8 +32,8 @@
       <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76988155">
-              <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.8849408">
+              <caret line="108" column="26" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -814,9 +814,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_vendingkata - 2018.05.04 at 22h 35m 44s.xml">
-      <configuration name="All in vendingkata" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_vendingkata - 2018.05.04 at 22h 46m 02s.xml">
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
@@ -842,6 +839,9 @@
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_vendingkata - 2018.05.04 at 23h 03m 47s.xml">
+      <configuration name="All in vendingkata" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_vendingkata - 2018.05.04 at 23h 05m 36s.xml">
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -925,8 +925,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76988155">
-          <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.8849408">
+          <caret line="108" column="26" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
