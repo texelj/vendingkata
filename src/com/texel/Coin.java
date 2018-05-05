@@ -4,7 +4,7 @@ package com.texel;
  * Created by jacob on 5/4/2018.
  */
 public enum Coin {
-    QUARTER (5.6,24.3);
+    QUARTER (5.6,24.3), DIME(2.3, 17.9);
 
     //grams
     private final double mass;

@@ -13,4 +13,11 @@ public class CoinTest {
         assertEquals(5.6,quarter.mass());
         assertEquals(24.3,quarter.diameter());
     }
+
+    @Test
+    public void WhenDimeUsed(){
+        Coin dime = Coin.DIME;
+        assertEquals(2.3,dime.mass());
+        assertEquals(17.9,dime.diameter());
+    }
 }
