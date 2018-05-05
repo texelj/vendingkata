@@ -20,4 +20,11 @@ public class CoinTest {
         assertEquals(2.3,dime.mass());
         assertEquals(17.9,dime.diameter());
     }
+
+    @Test
+    public void WhenNickelUsed(){
+        Coin nickel = Coin.NICKEL;
+        assertEquals(5.0,nickel.mass());
+        assertEquals(21.2,nickel.diameter());
+    }
 }
