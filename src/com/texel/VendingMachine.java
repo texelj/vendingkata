@@ -7,7 +7,7 @@ import java.util.List;
  * Created by jacob on 5/4/2018.
  */
 public class VendingMachine {
-    private double totalInserted;
+    private int totalInserted;
     private boolean productSelected;
     private String productDisplay;
 
@@ -23,7 +23,7 @@ public class VendingMachine {
             return productDisplay;
         }
         if(this.totalInserted>0){
-            return String.format("%.2f",totalInserted);
+            return String.format("%.2f",(float)totalInserted/100);
         }
         return "INSERT COIN";
     }
@@ -31,11 +31,11 @@ public class VendingMachine {
     public Coin[] insertCoin(Coin coin) {
         Coin[] coinReturn = new Coin[]{};
         if(coin.equals(Coin.QUARTER)){
-            totalInserted+=.25;
+            totalInserted+=25;
         } else if(coin.equals(Coin.DIME)){
-            totalInserted+=.10;
+            totalInserted+=10;
         } else if(coin.equals(Coin.NICKEL)){
-            totalInserted+=.05;
+            totalInserted+=5;
         } else {
             coinReturn = new Coin[] {coin};
         }
@@ -46,7 +46,7 @@ public class VendingMachine {
         Coin[] coinReturn = new Coin[]{};
         this.productSelected = true;
         if(totalInserted<product.price()){
-            productDisplay=String.format("%.2f",product.price());
+            productDisplay=String.format("%.2f",(float)product.price()/100);
         } else {
             productDisplay="THANK YOU";
             coinReturn = makeChange(totalInserted - product.price());
@@ -55,9 +55,14 @@ public class VendingMachine {
         return coinReturn;
     }
 
-    private Coin[] makeChange(double difference){
+    private Coin[] makeChange(int difference){
         List<Coin> coins = new ArrayList<>();
-        if(difference>=0.05){
+        System.out.println(difference);
+        while(difference>=10){
+            coins.add(Coin.DIME);
+            difference-=10;
+        }
+        if(difference>=5){
             coins.add(Coin.NICKEL);
         }
         return coins.toArray(new Coin[0]);

@@ -4,12 +4,12 @@ package com.texel;
  * Created by jacob on 5/4/2018.
  */
 public enum Product {
-    COLA(1.00), CHIPS(0.50), CANDY(0.65);
+    COLA(100), CHIPS(50), CANDY(65);
 
-    //Price
-    private final double price;
-    Product(double price){
+    //Price in cents
+    private final int price;
+    Product(int price){
         this.price = price;
     }
-    public final double price(){return price;}
+    public final int price(){return price;}
 }
