@@ -2,7 +2,9 @@ import com.texel.Coin;
 import com.texel.VendingMachine;
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 /**
  * Created by jacob on 5/4/2018.
@@ -40,5 +42,14 @@ public class VendingMachineTest {
         VendingMachine vend = new VendingMachine();
         vend.insertCoin(Coin.PENNY);
         assertEquals("INSERT COIN", vend.readDisplay());
+    }
+
+    @Test
+    public void WhenCoinInsertedAndReturnedOrNot(){
+        VendingMachine vend = new VendingMachine();
+        assertArrayEquals(vend.insertCoin(Coin.QUARTER), new Coin[]{});
+        assertArrayEquals(vend.insertCoin(Coin.DIME),new Coin[]{});
+        assertArrayEquals(vend.insertCoin(Coin.NICKEL),new Coin[]{});
+        assertArrayEquals(vend.insertCoin(Coin.PENNY),new Coin[]{Coin.PENNY});
     }
 }

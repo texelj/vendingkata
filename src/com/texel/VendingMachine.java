@@ -17,13 +17,17 @@ public class VendingMachine {
         return "INSERT COIN";
     }
 
-    public void insertCoin(Coin coin) {
+    public Coin[] insertCoin(Coin coin) {
+        Coin[] coinReturn = new Coin[]{};
         if(coin.equals(Coin.QUARTER)){
             totalInserted+=.25;
         } else if(coin.equals(Coin.DIME)){
             totalInserted+=.10;
         } else if(coin.equals(Coin.NICKEL)){
             totalInserted+=.05;
+        } else {
+            coinReturn = new Coin[] {coin};
         }
+        return coinReturn;
     }
 }
