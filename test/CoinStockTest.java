@@ -22,4 +22,11 @@ public class CoinStockTest {
         stock.addStock(Coin.QUARTER,3);
         assertEquals(stock.getCoinCount(Coin.QUARTER),8);
     }
+
+    @Test
+    public void WhenRemoveCoinStock(){
+        CoinStock stock = new CoinStock(5);
+        stock.removeStock(Coin.QUARTER, 2);
+        assertEquals(stock.getCoinCount(Coin.QUARTER), 3);
+    }
 }

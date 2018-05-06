@@ -23,4 +23,8 @@ public class CoinStock {
     public void addStock(Coin c, int add) {
         coinCounts.put(c,coinCounts.get(c) + add);
     }
+
+    public void removeStock(Coin c, int remove) {
+        coinCounts.put(c, coinCounts.get(c)-remove);
+    }
 }
