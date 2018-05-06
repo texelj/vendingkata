@@ -14,21 +14,31 @@ public class VendingMachine {
     private boolean productSelected;
     private String productDisplay;
     private ProductStock productStock;
+    private CoinStock coinStock;
 
     private static final int DEFAULT_STOCK_COUNT = 10;
 
     public VendingMachine(){
-        this(new ProductStock(DEFAULT_STOCK_COUNT));
+        this(new ProductStock(DEFAULT_STOCK_COUNT), new CoinStock(DEFAULT_STOCK_COUNT));
     }
 
     public VendingMachine(ProductStock initialStock) {
+        this(initialStock, new CoinStock(DEFAULT_STOCK_COUNT));
+    }
+
+    public VendingMachine(CoinStock initialStock) {
+        this(new ProductStock(DEFAULT_STOCK_COUNT),initialStock);
+    }
+
+    public VendingMachine(ProductStock initialProducts, CoinStock initialCoins){
         quarterInserted=0;
         dimeInserted=0;
         nickelInserted=0;
         totalInserted=0;
-        productSelected =false;
+        productSelected=false;
         productDisplay="";
-        this.productStock = initialStock;
+        this.productStock = initialProducts;
+        this.coinStock = initialCoins;
     }
 
     public String readDisplay(){
@@ -39,7 +49,19 @@ public class VendingMachine {
         if(this.totalInserted>0){
             return String.format("%.2f",(float)totalInserted/100);
         }
+        if(exactChangeNeeded()){
+            return "EXACT CHANGE ONLY";
+        }
         return "INSERT COIN";
+    }
+
+    private boolean exactChangeNeeded() {
+        //Cannot make 5 cent change
+        if(coinStock.getCoinCount(Coin.NICKEL)<=0)
+            return true;
+        //Cannot make 10 cent change
+        //Cannot make 15 cent change
+        return false;
     }
 
     public Coin[] insertCoin(Coin coin) {

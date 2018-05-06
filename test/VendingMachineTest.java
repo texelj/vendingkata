@@ -1,7 +1,4 @@
-import com.texel.Coin;
-import com.texel.Product;
-import com.texel.ProductStock;
-import com.texel.VendingMachine;
+import com.texel.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -255,5 +252,11 @@ public class VendingMachineTest {
         vend.selectProduct(Product.COLA);
         assertEquals(vend.readDisplay(),"SOLD OUT");
         assertEquals(vend.readDisplay(),"INSERT COIN");
+    }
+
+    @Test
+    public void WhenCannotMake5centChange(){
+        VendingMachine vend = new VendingMachine(new CoinStock(0));
+        assertEquals(vend.readDisplay(), "EXACT CHANGE ONLY");
     }
 }
