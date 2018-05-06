@@ -60,7 +60,10 @@ public class VendingMachine {
         if(coinStock.getCoinCount(Coin.NICKEL)<=0)
             return true;
         //Cannot make 10 cent change
+        if(coinStock.getCoinCount(Coin.NICKEL)<2 && coinStock.getCoinCount(Coin.DIME)<=0)
+            return true;
         //Cannot make 15 cent change
+        //Cannot make 20 cent change
         return false;
     }
 

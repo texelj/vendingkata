@@ -259,4 +259,13 @@ public class VendingMachineTest {
         VendingMachine vend = new VendingMachine(new CoinStock(0));
         assertEquals(vend.readDisplay(), "EXACT CHANGE ONLY");
     }
+
+    @Test
+    public void WhenCannotMake10CentChange(){
+        CoinStock stock = new CoinStock(0);
+        VendingMachine vend = new VendingMachine(stock);
+        stock.addStock(Coin.NICKEL,1);
+        stock.addStock(Coin.QUARTER,1);
+        assertEquals("EXACT CHANGE ONLY", vend.readDisplay());
+    }
 }
