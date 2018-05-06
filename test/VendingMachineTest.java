@@ -216,4 +216,14 @@ public class VendingMachineTest {
         assertArrayEquals(vend.returnCoins(), new Coin[]{Coin.QUARTER,Coin.DIME,Coin.NICKEL});
         assertEquals("INSERT COIN",vend.readDisplay());
     }
+
+    @Test
+    public void WhenCoinReturnMultipleOfSameCoin(){
+        VendingMachine vend = new VendingMachine();
+        vend.insertCoin(Coin.DIME);
+        vend.insertCoin(Coin.DIME);
+        vend.insertCoin(Coin.DIME);
+        assertArrayEquals(vend.returnCoins(), new Coin[]{Coin.DIME,Coin.DIME,Coin.DIME});
+        assertEquals("INSERT COIN",vend.readDisplay());
+    }
 }

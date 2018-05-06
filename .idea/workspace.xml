@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a4d6e96-250e-491f-bd81-1c3d70cbe357" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/texel/VendingMachine.java" afterPath="$PROJECT_DIR$/src/com/texel/VendingMachine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/VendingMachineTest.java" afterPath="$PROJECT_DIR$/test/VendingMachineTest.java" />
     </list>
     <ignored path="vendingkata.iws" />
@@ -32,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="216" column="55" selection-start-line="216" selection-start-column="55" selection-end-line="216" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.74111676">
+              <caret line="226" column="11" selection-start-line="226" selection-start-column="11" selection-end-line="226" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,24 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/texel/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-              <folding>
-                <element signature="e#193#194#0" expanded="true" />
-                <element signature="e#227#228#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/texel/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6672598">
-              <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+            <state vertical-scroll-proportion="-17.62069">
+              <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2206#2212#0" expanded="true" />
@@ -342,8 +328,8 @@
         <option value="$PROJECT_DIR$/src/com/texel/Coin.java" />
         <option value="$PROJECT_DIR$/test/CoinTest.java" />
         <option value="$PROJECT_DIR$/src/com/texel/Product.java" />
-        <option value="$PROJECT_DIR$/test/VendingMachineTest.java" />
         <option value="$PROJECT_DIR$/src/com/texel/VendingMachine.java" />
+        <option value="$PROJECT_DIR$/test/VendingMachineTest.java" />
       </list>
     </option>
   </component>
@@ -804,9 +790,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_vendingkata - 2018.05.04 at 23h 52m 19s.xml">
-      <configuration name="All in vendingkata" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_vendingkata - 2018.05.04 at 23h 54m 10s.xml">
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
@@ -832,6 +815,9 @@
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_vendingkata - 2018.05.05 at 21h 38m 21s.xml">
+      <configuration name="All in vendingkata" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_vendingkata - 2018.05.05 at 21h 40m 47s.xml">
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -898,10 +884,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -920,6 +903,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -930,34 +914,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/texel/VendingMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.62069">
+          <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2206#2212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/texel/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="216" column="55" selection-start-line="216" selection-start-column="55" selection-end-line="216" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.74111676">
+          <caret line="226" column="11" selection-start-line="226" selection-start-column="11" selection-end-line="226" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/texel/VendingMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6672598">
-          <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2206#2212#0" expanded="true" />
           </folding>
         </state>
       </provider>
