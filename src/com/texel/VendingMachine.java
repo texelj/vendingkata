@@ -99,11 +99,18 @@ public class VendingMachine {
             productDisplay=String.format("%.2f",(float)product.price()/100);
         } else {
             productDisplay="THANK YOU";
+            addInsertedCoinToStock();
             coinReturn = makeChange(totalInserted - product.price());
             clearInserted();
             productStock.removeStock(product,1);
         }
         return coinReturn;
+    }
+
+    private void addInsertedCoinToStock() {
+        coinStock.addStock(Coin.NICKEL,nickelInserted);
+        coinStock.addStock(Coin.DIME,dimeInserted);
+        coinStock.addStock(Coin.QUARTER,quarterInserted);
     }
 
     private Coin[] makeChange(int difference){

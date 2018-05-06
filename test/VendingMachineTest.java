@@ -288,4 +288,18 @@ public class VendingMachineTest {
         stock.addStock(Coin.NICKEL,2);
         assertEquals("EXACT CHANGE ONLY", vend.readDisplay());
     }
+
+    @Test
+    public void WhenPurchaseCompleteSoCoinStockIncreases(){
+        CoinStock stock = new CoinStock(0);
+        VendingMachine vend = new VendingMachine(stock);
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.DIME);
+        vend.insertCoin(Coin.DIME);
+        vend.insertCoin(Coin.NICKEL);
+        vend.selectProduct(Product.CHIPS);
+        assertEquals(stock.getCoinCount(Coin.QUARTER),1);
+        assertEquals(stock.getCoinCount(Coin.DIME),2);
+        assertEquals(stock.getCoinCount(Coin.NICKEL),1);
+    }
 }
