@@ -228,10 +228,19 @@ public class VendingMachineTest {
     }
 
     @Test
-    public void WhenNoStockAndNoCoinsInsertedAndDisplayCheckedTwice(){
+    public void WhenSoldOutAndNoCoinsInsertedAndDisplayCheckedTwice(){
         VendingMachine vend = new VendingMachine(new ProductStock(0));
         vend.selectProduct(Product.COLA);
         assertEquals(vend.readDisplay(),"SOLD OUT");
         assertEquals(vend.readDisplay(),"INSERT COIN");
+    }
+
+    @Test
+    public void WhenSoldOutAndCoinsInsertedAndDisplayCheckedTwice(){
+        VendingMachine vend = new VendingMachine(new ProductStock(0));
+        vend.insertCoin(Coin.QUARTER);
+        vend.selectProduct(Product.COLA);
+        assertEquals(vend.readDisplay(),"SOLD OUT");
+        assertEquals(vend.readDisplay(),"0.25");
     }
 }
