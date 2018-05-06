@@ -15,6 +15,9 @@ public class VendingMachine {
     private String productDisplay;
 
     public VendingMachine(){
+        quarterInserted=0;
+        dimeInserted=0;
+        nickelInserted=0;
         totalInserted=0;
         productSelected =false;
         productDisplay="";

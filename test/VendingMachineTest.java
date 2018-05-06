@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 
 /**
  * Created by jacob on 5/4/2018.
@@ -226,4 +225,6 @@ public class VendingMachineTest {
         assertArrayEquals(vend.returnCoins(), new Coin[]{Coin.DIME,Coin.DIME,Coin.DIME});
         assertEquals("INSERT COIN",vend.readDisplay());
     }
+
+
 }
