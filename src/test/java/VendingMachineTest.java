@@ -55,7 +55,7 @@ public class VendingMachineTest {
     public void WhenProductColaPriceCheckAndDisplayRead(){
         VendingMachine vend = new VendingMachine();
         vend.selectProduct(Product.COLA);
-        assertEquals("1.00",vend.readDisplay());
+        assertEquals("PRICE 1.00",vend.readDisplay());
         assertEquals("INSERT COIN",vend.readDisplay());
     }
 
@@ -76,7 +76,7 @@ public class VendingMachineTest {
         VendingMachine vend = new VendingMachine();
         vend.insertCoin(Coin.QUARTER);
         vend.selectProduct(Product.COLA);
-        assertEquals("1.00",vend.readDisplay());
+        assertEquals("PRICE 1.00",vend.readDisplay());
         assertEquals("0.25",vend.readDisplay());
     }
 
@@ -84,7 +84,7 @@ public class VendingMachineTest {
     public void WhenProductChipsSelectedWithNoMoneyAndDisplayRead(){
         VendingMachine vend = new VendingMachine();
         vend.selectProduct(Product.CHIPS);
-        assertEquals("0.50",vend.readDisplay());
+        assertEquals("PRICE 0.50",vend.readDisplay());
         assertEquals("INSERT COIN",vend.readDisplay());
     }
 
@@ -103,7 +103,7 @@ public class VendingMachineTest {
         VendingMachine vend = new VendingMachine();
         vend.insertCoin(Coin.QUARTER);
         vend.selectProduct(Product.CHIPS);
-        assertEquals("0.50",vend.readDisplay());
+        assertEquals("PRICE 0.50",vend.readDisplay());
         assertEquals("0.25",vend.readDisplay());
     }
 
@@ -111,7 +111,7 @@ public class VendingMachineTest {
     public void WhenProductCandySelectedWithNoMoneyAndDisplayRead(){
         VendingMachine vend = new VendingMachine();
         vend.selectProduct(Product.CANDY);
-        assertEquals("0.65",vend.readDisplay());
+        assertEquals("PRICE 0.65",vend.readDisplay());
         assertEquals("INSERT COIN",vend.readDisplay());
     }
 
@@ -132,7 +132,7 @@ public class VendingMachineTest {
         VendingMachine vend = new VendingMachine();
         vend.insertCoin(Coin.QUARTER);
         vend.selectProduct(Product.CANDY);
-        assertEquals("0.65",vend.readDisplay());
+        assertEquals("PRICE 0.65",vend.readDisplay());
         assertEquals("0.25",vend.readDisplay());
     }
 

@@ -92,11 +92,11 @@ public class VendingMachine {
 
     public Coin[] selectProduct(Product product) {
         Coin[] coinReturn = new Coin[]{};
-        this.productSelected = true;
+        productSelected = true;
         if(productStock.getProductCount(product)<=0){
-          productDisplay = "SOLD OUT";
+            productDisplay = "SOLD OUT";
         } else if(totalInserted<product.price()){
-            productDisplay=String.format("%.2f",(float)product.price()/100);
+            productDisplay=String.format("PRICE %.2f",(float)product.price()/100);
         } else {
             productDisplay="THANK YOU";
             addInsertedCoinToStock();
