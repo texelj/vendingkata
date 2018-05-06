@@ -16,5 +16,10 @@ public class ProductStockTest {
         }
     }
 
-
+    @Test
+    public void WhenProductStockCreatedAndAddProduct(){
+        ProductStock stock = new ProductStock(5);
+        stock.addStock(Product.COLA, 3);
+        assertEquals(stock.getProductCount(Product.COLA),8);
+    }
 }

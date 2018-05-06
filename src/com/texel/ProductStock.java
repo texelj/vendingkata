@@ -19,4 +19,8 @@ public class ProductStock {
     public int getProductCount(Product p){
         return this.productCounts.get(p);
     }
+
+    public void addStock(Product p, int additionalStock) {
+        productCounts.put(p,productCounts.get(p)+additionalStock);
+    }
 }

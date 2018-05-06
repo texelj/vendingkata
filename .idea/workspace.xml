@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a4d6e96-250e-491f-bd81-1c3d70cbe357" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/texel/ProductStock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/ProductStockTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/texel/VendingMachine.class" afterPath="$PROJECT_DIR$/build/classes/main/com/texel/VendingMachine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/VendingMachineTest.class" afterPath="$PROJECT_DIR$/build/classes/test/VendingMachineTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/texel/VendingMachine.java" afterPath="$PROJECT_DIR$/src/com/texel/VendingMachine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/VendingMachineTest.java" afterPath="$PROJECT_DIR$/test/VendingMachineTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/texel/ProductStock.java" afterPath="$PROJECT_DIR$/src/com/texel/ProductStock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ProductStockTest.java" afterPath="$PROJECT_DIR$/test/ProductStockTest.java" />
     </list>
     <ignored path="vendingkata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.472081">
+            <state vertical-scroll-proportion="0.0">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -49,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductStockTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProductStockTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/ProductStockTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.6040609">
+              <caret line="21" column="22" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,11 +61,13 @@
         <entry file="file://$PROJECT_DIR$/src/com/texel/ProductStock.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+              <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#445#446#0" expanded="true" />
                 <element signature="e#493#494#0" expanded="true" />
+                <element signature="e#553#554#0" expanded="true" />
+                <element signature="e#626#627#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -824,9 +822,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_vendingkata - 2018.05.04 at 23h 55m 35s.xml">
-      <configuration name="All in vendingkata" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_vendingkata - 2018.05.04 at 23h 57m 20s.xml">
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
@@ -854,6 +849,9 @@
     <history-entry file="All_in_vendingkata - 2018.05.05 at 22h 12m 12s.xml">
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_vendingkata - 2018.05.05 at 22h 18m 44s.xml">
+      <configuration name="All in vendingkata" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -866,7 +864,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -967,32 +965,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/VendingMachineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/texel/ProductStock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#445#446#0" expanded="true" />
             <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ProductStockTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/VendingMachineTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.472081">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.6040609">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
