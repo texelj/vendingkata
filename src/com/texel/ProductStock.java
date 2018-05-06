@@ -23,4 +23,8 @@ public class ProductStock {
     public void addStock(Product p, int additionalStock) {
         productCounts.put(p,productCounts.get(p)+additionalStock);
     }
+
+    public void removeStock(Product p, int removeStock) {
+        productCounts.put(p,productCounts.get(p)-removeStock);
+    }
 }

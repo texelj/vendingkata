@@ -22,4 +22,11 @@ public class ProductStockTest {
         stock.addStock(Product.COLA, 3);
         assertEquals(stock.getProductCount(Product.COLA),8);
     }
+
+    @Test
+    public void WhenProductStockCreatedAndDecreaseProduct(){
+        ProductStock stock = new ProductStock(5);
+        stock.removeStock(Product.COLA, 3);
+        assertEquals(stock.getProductCount(Product.COLA),2);
+    }
 }
