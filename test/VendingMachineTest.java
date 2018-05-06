@@ -243,4 +243,17 @@ public class VendingMachineTest {
         assertEquals(vend.readDisplay(),"SOLD OUT");
         assertEquals(vend.readDisplay(),"0.25");
     }
+
+    @Test
+    public void WhenLastItemSoldAndSelectProductAndDisplayReadTwice(){
+        VendingMachine vend = new VendingMachine(new ProductStock(1));
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.QUARTER);
+        vend.selectProduct(Product.COLA);
+        vend.selectProduct(Product.COLA);
+        assertEquals(vend.readDisplay(),"SOLD OUT");
+        assertEquals(vend.readDisplay(),"INSERT COIN");
+    }
 }

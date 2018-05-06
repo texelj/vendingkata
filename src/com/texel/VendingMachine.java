@@ -70,6 +70,7 @@ public class VendingMachine {
             productDisplay="THANK YOU";
             coinReturn = makeChange(totalInserted - product.price());
             clearInserted();
+            productStock.removeStock(product,1);
         }
         return coinReturn;
     }
