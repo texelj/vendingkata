@@ -7,6 +7,9 @@ import java.util.List;
  * Created by jacob on 5/4/2018.
  */
 public class VendingMachine {
+    private int quarterInserted;
+    private int dimeInserted;
+    private int nickelInserted;
     private int totalInserted;
     private boolean productSelected;
     private String productDisplay;
@@ -32,10 +35,13 @@ public class VendingMachine {
         Coin[] coinReturn = new Coin[]{};
         if(coin.equals(Coin.QUARTER)){
             totalInserted+=25;
+            quarterInserted++;
         } else if(coin.equals(Coin.DIME)){
             totalInserted+=10;
+            dimeInserted++;
         } else if(coin.equals(Coin.NICKEL)){
             totalInserted+=5;
+            nickelInserted++;
         } else {
             coinReturn = new Coin[] {coin};
         }
@@ -50,7 +56,7 @@ public class VendingMachine {
         } else {
             productDisplay="THANK YOU";
             coinReturn = makeChange(totalInserted - product.price());
-            totalInserted = 0;
+            clearInserted();
         }
         return coinReturn;
     }
@@ -73,7 +79,20 @@ public class VendingMachine {
 
     public Coin[] returnCoins() {
         List<Coin> returnCoins = new ArrayList<Coin>();
-
+        for(int i=0; i<quarterInserted; i++)
+            returnCoins.add(Coin.QUARTER);
+        for(int i=0; i<dimeInserted; i++)
+            returnCoins.add(Coin.DIME);
+        for(int i=0; i<nickelInserted; i++)
+            returnCoins.add(Coin.NICKEL);
+        clearInserted();
         return returnCoins.toArray(new Coin[0]);
+    }
+
+    private void clearInserted(){
+        totalInserted = 0;
+        quarterInserted = 0;
+        nickelInserted = 0;
+        dimeInserted = 0;
     }
 }
