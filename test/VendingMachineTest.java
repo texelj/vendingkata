@@ -302,4 +302,15 @@ public class VendingMachineTest {
         assertEquals(stock.getCoinCount(Coin.DIME),2);
         assertEquals(stock.getCoinCount(Coin.NICKEL),1);
     }
+
+    @Test
+    public void WhenPurchaseChangeCauseDecreaseInCoinStock(){
+        CoinStock stock = new CoinStock(4);
+        VendingMachine vend = new VendingMachine(stock);
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.QUARTER);
+        vend.insertCoin(Coin.QUARTER);
+        vend.selectProduct(Product.CANDY);
+        assertEquals(stock.getCoinCount(Coin.DIME),3);
+    }
 }

@@ -115,16 +115,20 @@ public class VendingMachine {
 
     private Coin[] makeChange(int difference){
         List<Coin> coins = new ArrayList<>();
-        while(difference>=25){
+        while(difference>=25 && coinStock.getCoinCount(Coin.QUARTER)>0){
             coins.add(Coin.QUARTER);
+            coinStock.removeStock(Coin.QUARTER,1);
             difference-=25;
         }
-        while(difference>=10){
+        while(difference>=10 && coinStock.getCoinCount(Coin.DIME)>0){
             coins.add(Coin.DIME);
+            coinStock.removeStock(Coin.DIME,1);
             difference-=10;
         }
-        if(difference>=5){
+        while(difference>=5 && coinStock.getCoinCount(Coin.NICKEL)>0){
             coins.add(Coin.NICKEL);
+            coinStock.removeStock(Coin.NICKEL,1);
+            difference-=5;
         }
         return coins.toArray(new Coin[0]);
     }
