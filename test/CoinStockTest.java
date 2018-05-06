@@ -15,4 +15,11 @@ public class CoinStockTest {
             assertEquals(stock.getCoinCount(p), 5);
         }
     }
+
+    @Test
+    public void WhenAddCoinStock(){
+        CoinStock stock = new CoinStock(5);
+        stock.addStock(Coin.QUARTER,3);
+        assertEquals(stock.getCoinCount(Coin.QUARTER),8);
+    }
 }

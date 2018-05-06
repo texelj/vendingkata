@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a4d6e96-250e-491f-bd81-1c3d70cbe357" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/texel/CoinStock.java" afterPath="$PROJECT_DIR$/src/com/texel/CoinStock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/CoinStockTest.java" afterPath="$PROJECT_DIR$/test/CoinStockTest.java" />
     </list>
     <ignored path="vendingkata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoinStockTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CoinStockTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/CoinStockTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43074325">
-              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,15 +56,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoinStock.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CoinStock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/texel/CoinStock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.660473">
+              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#412#413#0" expanded="true" />
                 <element signature="e#457#458#0" expanded="true" />
+                <element signature="e#502#503#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -389,8 +392,8 @@
         <option value="$PROJECT_DIR$/src/com/texel/ProductStock.java" />
         <option value="$PROJECT_DIR$/src/com/texel/VendingMachine.java" />
         <option value="$PROJECT_DIR$/test/VendingMachineTest.java" />
-        <option value="$PROJECT_DIR$/src/com/texel/CoinStock.java" />
         <option value="$PROJECT_DIR$/test/CoinStockTest.java" />
+        <option value="$PROJECT_DIR$/src/com/texel/CoinStock.java" />
       </list>
     </option>
   </component>
@@ -851,9 +854,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_vendingkata - 2018.05.05 at 22h 21m 15s.xml">
-      <configuration name="All in vendingkata" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_vendingkata - 2018.05.05 at 22h 28m 06s.xml">
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
@@ -879,6 +879,9 @@
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_vendingkata - 2018.05.05 at 23h 32m 13s.xml">
+      <configuration name="All in vendingkata" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_vendingkata - 2018.05.05 at 23h 34m 49s.xml">
       <configuration name="All in vendingkata" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1053,16 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/VendingMachineTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="219" column="9" selection-start-line="219" selection-start-column="9" selection-end-line="219" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/texel/ProductStock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1079,18 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/texel/CoinStock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/ProductStockTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1101,12 +1082,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/CoinStockTest.java">
+    <entry file="file://$PROJECT_DIR$/test/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43074325">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="219" column="9" selection-start-line="219" selection-start-column="9" selection-end-line="219" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CoinStockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/texel/CoinStock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.660473">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -19,4 +19,8 @@ public class CoinStock {
     public int getCoinCount(Coin c){
         return this.coinCounts.get(c);
     }
+
+    public void addStock(Coin c, int add) {
+        coinCounts.put(c,coinCounts.get(c) + add);
+    }
 }
