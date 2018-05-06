@@ -1,5 +1,6 @@
 import com.texel.Coin;
 import com.texel.Product;
+import com.texel.ProductStock;
 import com.texel.VendingMachine;
 import org.junit.Test;
 
@@ -226,5 +227,11 @@ public class VendingMachineTest {
         assertEquals("INSERT COIN",vend.readDisplay());
     }
 
-
+    @Test
+    public void WhenNoStockAndNoCoinsInsertedAndDisplayCheckedTwice(){
+        VendingMachine vend = new VendingMachine(new ProductStock(0));
+        vend.selectProduct(Product.COLA);
+        assertEquals(vend.readDisplay(),"SOLD OUT");
+        assertEquals(vend.readDisplay(),"INSERT COIN");
+    }
 }

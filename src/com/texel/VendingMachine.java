@@ -13,14 +13,22 @@ public class VendingMachine {
     private int totalInserted;
     private boolean productSelected;
     private String productDisplay;
+    private ProductStock productStock;
+
+    private static final int DEFAULT_STOCK_COUNT = 10;
 
     public VendingMachine(){
+        this(new ProductStock(DEFAULT_STOCK_COUNT));
+    }
+
+    public VendingMachine(ProductStock initialStock) {
         quarterInserted=0;
         dimeInserted=0;
         nickelInserted=0;
         totalInserted=0;
         productSelected =false;
         productDisplay="";
+        this.productStock = initialStock;
     }
 
     public String readDisplay(){
@@ -54,7 +62,9 @@ public class VendingMachine {
     public Coin[] selectProduct(Product product) {
         Coin[] coinReturn = new Coin[]{};
         this.productSelected = true;
-        if(totalInserted<product.price()){
+        if(productStock.getProductCount(product)<=0){
+          productDisplay = "SOLD OUT";
+        } else if(totalInserted<product.price()){
             productDisplay=String.format("%.2f",(float)product.price()/100);
         } else {
             productDisplay="THANK YOU";
