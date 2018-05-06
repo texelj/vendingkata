@@ -200,4 +200,10 @@ public class VendingMachineTest {
         assertEquals("0.90",vend.readDisplay());
         assertArrayEquals(vend.selectProduct(Product.CHIPS), new Coin[]{Coin.QUARTER,Coin.DIME,Coin.NICKEL});
     }
+
+    @Test
+    public void WhenReturnChangeWithNoCoinsInserted(){
+        VendingMachine vend = new VendingMachine();
+        assertArrayEquals(vend.returnCoins(),new Coin[]{});
+    }
 }

@@ -57,7 +57,6 @@ public class VendingMachine {
 
     private Coin[] makeChange(int difference){
         List<Coin> coins = new ArrayList<>();
-        System.out.println(difference);
         while(difference>=25){
             coins.add(Coin.QUARTER);
             difference-=25;
@@ -70,5 +69,11 @@ public class VendingMachine {
             coins.add(Coin.NICKEL);
         }
         return coins.toArray(new Coin[0]);
+    }
+
+    public Coin[] returnCoins() {
+        List<Coin> returnCoins = new ArrayList<Coin>();
+
+        return returnCoins.toArray(new Coin[0]);
     }
 }
