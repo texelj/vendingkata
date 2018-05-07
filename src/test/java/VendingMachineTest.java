@@ -298,9 +298,9 @@ public class VendingMachineTest {
         vend.insertCoin(Coin.DIME);
         vend.insertCoin(Coin.NICKEL);
         vend.selectProduct(Product.CHIPS);
-        assertEquals(stock.getCoinCount(Coin.QUARTER),1);
-        assertEquals(stock.getCoinCount(Coin.DIME),2);
-        assertEquals(stock.getCoinCount(Coin.NICKEL),1);
+        assertEquals(stock.getCount(Coin.QUARTER),1);
+        assertEquals(stock.getCount(Coin.DIME),2);
+        assertEquals(stock.getCount(Coin.NICKEL),1);
     }
 
     @Test
@@ -311,6 +311,6 @@ public class VendingMachineTest {
         vend.insertCoin(Coin.QUARTER);
         vend.insertCoin(Coin.QUARTER);
         vend.selectProduct(Product.CANDY);
-        assertEquals(stock.getCoinCount(Coin.DIME),3);
+        assertEquals(stock.getCount(Coin.DIME),3);
     }
 }

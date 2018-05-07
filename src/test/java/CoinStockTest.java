@@ -12,7 +12,7 @@ public class CoinStockTest {
     public void WhenCoinStockCreatedVerifyEachCoinHasStock(){
         CoinStock stock = new CoinStock(5);
         for(Coin p: Coin.values()){
-            assertEquals(stock.getCoinCount(p), 5);
+            assertEquals(stock.getCount(p), 5);
         }
     }
 
@@ -20,13 +20,13 @@ public class CoinStockTest {
     public void WhenAddCoinStock(){
         CoinStock stock = new CoinStock(5);
         stock.addStock(Coin.QUARTER,3);
-        assertEquals(stock.getCoinCount(Coin.QUARTER),8);
+        assertEquals(stock.getCount(Coin.QUARTER),8);
     }
 
     @Test
     public void WhenRemoveCoinStock(){
         CoinStock stock = new CoinStock(5);
         stock.removeStock(Coin.QUARTER, 2);
-        assertEquals(stock.getCoinCount(Coin.QUARTER), 3);
+        assertEquals(stock.getCount(Coin.QUARTER), 3);
     }
 }

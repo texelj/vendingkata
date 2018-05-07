@@ -12,7 +12,7 @@ public class ProductStockTest {
     public void WhenProductStockCreatedVerifyEachProductHasStock(){
         ProductStock stock = new ProductStock(5);
         for(Product p: Product.values()){
-            assertEquals(stock.getProductCount(p), 5);
+            assertEquals(stock.getCount(p), 5);
         }
     }
 
@@ -20,13 +20,13 @@ public class ProductStockTest {
     public void WhenProductStockCreatedAndAddProduct(){
         ProductStock stock = new ProductStock(5);
         stock.addStock(Product.COLA, 3);
-        assertEquals(stock.getProductCount(Product.COLA),8);
+        assertEquals(stock.getCount(Product.COLA),8);
     }
 
     @Test
     public void WhenProductStockCreatedAndDecreaseProduct(){
         ProductStock stock = new ProductStock(5);
         stock.removeStock(Product.COLA, 3);
-        assertEquals(stock.getProductCount(Product.COLA),2);
+        assertEquals(stock.getCount(Product.COLA),2);
     }
 }

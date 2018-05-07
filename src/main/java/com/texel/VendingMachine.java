@@ -57,18 +57,18 @@ public class VendingMachine {
 
     private boolean exactChangeNeeded() {
         //Cannot make 5 cent change
-        if(coinStock.getCoinCount(Coin.NICKEL)<=0)
+        if(coinStock.getCount(Coin.NICKEL)<=0)
             return true;
         //Cannot make 10 cent change
-        if(coinStock.getCoinCount(Coin.NICKEL)<2 && coinStock.getCoinCount(Coin.DIME)<=0)
+        if(coinStock.getCount(Coin.NICKEL)<2 && coinStock.getCount(Coin.DIME)<=0)
             return true;
         //Cannot make 15 cent change
-        if(coinStock.getCoinCount(Coin.DIME)<=0 && coinStock.getCoinCount(Coin.NICKEL)<3
-                || coinStock.getCoinCount(Coin.DIME)>=1 && coinStock.getCoinCount(Coin.NICKEL)<=0)
+        if(coinStock.getCount(Coin.DIME)<=0 && coinStock.getCount(Coin.NICKEL)<3
+                || coinStock.getCount(Coin.DIME)>=1 && coinStock.getCount(Coin.NICKEL)<=0)
             return true;
         //Cannot make 20 cent change
-        if(coinStock.getCoinCount(Coin.DIME)<=0 && coinStock.getCoinCount(Coin.NICKEL)<4
-                || coinStock.getCoinCount(Coin.DIME)==1 && coinStock.getCoinCount(Coin.NICKEL)<2)
+        if(coinStock.getCount(Coin.DIME)<=0 && coinStock.getCount(Coin.NICKEL)<4
+                || coinStock.getCount(Coin.DIME)==1 && coinStock.getCount(Coin.NICKEL)<2)
             return true;
         return false;
     }
@@ -93,7 +93,7 @@ public class VendingMachine {
     public Coin[] selectProduct(Product product) {
         Coin[] coinReturn = new Coin[]{};
         productSelected = true;
-        if(productStock.getProductCount(product)<=0){
+        if(productStock.getCount(product)<=0){
             productDisplay = "SOLD OUT";
         } else if(totalInserted<product.price()){
             productDisplay=String.format("PRICE %.2f",(float)product.price()/100);
@@ -115,17 +115,17 @@ public class VendingMachine {
 
     private Coin[] makeChange(int difference){
         List<Coin> coins = new ArrayList<>();
-        while(difference>=25 && coinStock.getCoinCount(Coin.QUARTER)>0){
+        while(difference>=25 && coinStock.getCount(Coin.QUARTER)>0){
             coins.add(Coin.QUARTER);
             coinStock.removeStock(Coin.QUARTER,1);
             difference-=25;
         }
-        while(difference>=10 && coinStock.getCoinCount(Coin.DIME)>0){
+        while(difference>=10 && coinStock.getCount(Coin.DIME)>0){
             coins.add(Coin.DIME);
             coinStock.removeStock(Coin.DIME,1);
             difference-=10;
         }
-        while(difference>=5 && coinStock.getCoinCount(Coin.NICKEL)>0){
+        while(difference>=5 && coinStock.getCount(Coin.NICKEL)>0){
             coins.add(Coin.NICKEL);
             coinStock.removeStock(Coin.NICKEL,1);
             difference-=5;
