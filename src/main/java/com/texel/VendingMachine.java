@@ -99,9 +99,9 @@ public class VendingMachine {
     }
 
     private void addInsertedCoinToStock() {
-        coinStock.addStock(Coin.NICKEL,coinsInserted.getCount(Coin.NICKEL));
-        coinStock.addStock(Coin.DIME,coinsInserted.getCount(Coin.DIME));
-        coinStock.addStock(Coin.QUARTER,coinsInserted.getCount(Coin.QUARTER));
+        for(Coin c: Coin.values()){
+            coinStock.addStock(c,coinsInserted.getCount(c));
+        }
     }
 
     private Coin[] makeChange(int changeTotal){
@@ -134,12 +134,10 @@ public class VendingMachine {
 
     public Coin[] returnCoins() {
         List<Coin> returnCoins = new ArrayList<Coin>();
-        for(int i=0; i<coinsInserted.getCount(Coin.QUARTER); i++)
-            returnCoins.add(Coin.QUARTER);
-        for(int i=0; i<coinsInserted.getCount(Coin.DIME); i++)
-            returnCoins.add(Coin.DIME);
-        for(int i=0; i<coinsInserted.getCount(Coin.NICKEL); i++)
-            returnCoins.add(Coin.NICKEL);
+        for(Coin c: Coin.values()){
+            for(int i=0; i<coinsInserted.getCount(c); i++)
+                returnCoins.add(c);
+        }
         clearInserted();
         return returnCoins.toArray(new Coin[0]);
     }
