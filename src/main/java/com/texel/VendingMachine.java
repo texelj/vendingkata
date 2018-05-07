@@ -1,7 +1,9 @@
 package com.texel;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.lang.Math.*;
 
 /**
  * Created by jacob on 5/4/2018.
@@ -113,24 +115,32 @@ public class VendingMachine {
         coinStock.addStock(Coin.QUARTER,quarterInserted);
     }
 
-    private Coin[] makeChange(int difference){
+    private Coin[] makeChange(int changeTotal){
         List<Coin> coins = new ArrayList<>();
-        while(difference>=25 && coinStock.getCount(Coin.QUARTER)>0){
-            coins.add(Coin.QUARTER);
-            coinStock.removeStock(Coin.QUARTER,1);
-            difference-=25;
-        }
-        while(difference>=10 && coinStock.getCount(Coin.DIME)>0){
-            coins.add(Coin.DIME);
-            coinStock.removeStock(Coin.DIME,1);
-            difference-=10;
-        }
-        while(difference>=5 && coinStock.getCount(Coin.NICKEL)>0){
-            coins.add(Coin.NICKEL);
-            coinStock.removeStock(Coin.NICKEL,1);
-            difference-=5;
+        for(Coin c: Coin.values()){
+            int coinValue = determineCoinValue(c);
+            if(coinValue>0) {
+                int coinChange = Math.min(changeTotal / coinValue, coinStock.getCount(c));
+                if(coinChange>0) {
+                    changeTotal -= coinChange * coinValue;
+                    coinStock.removeStock(c, coinChange);
+                    for (; coinChange > 0; coinChange--) coins.add(c);
+                }
+            }
         }
         return coins.toArray(new Coin[0]);
+    }
+
+    private int determineCoinValue(Coin c) {
+        if(c.diameter()==24.3 && c.mass()==5.6){
+            return 25;
+        } else if(c.mass()==2.3 && c.diameter()==17.9){
+            return 10;
+        } else if(c.mass()==5.0 && c.diameter()==21.2){
+            return 5;
+        } else {
+            return 0;
+        }
     }
 
     public Coin[] returnCoins() {
