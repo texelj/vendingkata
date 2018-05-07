@@ -1,22 +1,18 @@
 package com.texel;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.lang.Math.*;
 
 /**
  * Created by jacob on 5/4/2018.
  */
 public class VendingMachine {
-    private int quarterInserted;
-    private int dimeInserted;
-    private int nickelInserted;
     private int totalInserted;
     private boolean productSelected;
     private String productDisplay;
     private ProductStock productStock;
     private CoinStock coinStock;
+    private CoinStock coinsInserted;
 
     private static final int DEFAULT_STOCK_COUNT = 10;
 
@@ -33,14 +29,12 @@ public class VendingMachine {
     }
 
     public VendingMachine(ProductStock initialProducts, CoinStock initialCoins){
-        quarterInserted=0;
-        dimeInserted=0;
-        nickelInserted=0;
         totalInserted=0;
         productSelected=false;
         productDisplay="";
         this.productStock = initialProducts;
         this.coinStock = initialCoins;
+        coinsInserted = new CoinStock(0);
     }
 
     public String readDisplay(){
@@ -77,15 +71,10 @@ public class VendingMachine {
 
     public Coin[] insertCoin(Coin coin) {
         Coin[] coinReturn = new Coin[]{};
-        if(coin.equals(Coin.QUARTER)){
-            totalInserted+=25;
-            quarterInserted++;
-        } else if(coin.equals(Coin.DIME)){
-            totalInserted+=10;
-            dimeInserted++;
-        } else if(coin.equals(Coin.NICKEL)){
-            totalInserted+=5;
-            nickelInserted++;
+        int coinValue = determineCoinValue(coin);
+        if(coinValue>0){
+            coinsInserted.addStock(coin,1);
+            totalInserted+=coinValue;
         } else {
             coinReturn = new Coin[] {coin};
         }
@@ -110,9 +99,9 @@ public class VendingMachine {
     }
 
     private void addInsertedCoinToStock() {
-        coinStock.addStock(Coin.NICKEL,nickelInserted);
-        coinStock.addStock(Coin.DIME,dimeInserted);
-        coinStock.addStock(Coin.QUARTER,quarterInserted);
+        coinStock.addStock(Coin.NICKEL,coinsInserted.getCount(Coin.NICKEL));
+        coinStock.addStock(Coin.DIME,coinsInserted.getCount(Coin.DIME));
+        coinStock.addStock(Coin.QUARTER,coinsInserted.getCount(Coin.QUARTER));
     }
 
     private Coin[] makeChange(int changeTotal){
@@ -145,11 +134,11 @@ public class VendingMachine {
 
     public Coin[] returnCoins() {
         List<Coin> returnCoins = new ArrayList<Coin>();
-        for(int i=0; i<quarterInserted; i++)
+        for(int i=0; i<coinsInserted.getCount(Coin.QUARTER); i++)
             returnCoins.add(Coin.QUARTER);
-        for(int i=0; i<dimeInserted; i++)
+        for(int i=0; i<coinsInserted.getCount(Coin.DIME); i++)
             returnCoins.add(Coin.DIME);
-        for(int i=0; i<nickelInserted; i++)
+        for(int i=0; i<coinsInserted.getCount(Coin.NICKEL); i++)
             returnCoins.add(Coin.NICKEL);
         clearInserted();
         return returnCoins.toArray(new Coin[0]);
@@ -157,8 +146,6 @@ public class VendingMachine {
 
     private void clearInserted(){
         totalInserted = 0;
-        quarterInserted = 0;
-        nickelInserted = 0;
-        dimeInserted = 0;
+        coinsInserted = new CoinStock(0);
     }
 }
